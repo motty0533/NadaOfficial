@@ -1,0 +1,282 @@
+﻿@charset "UTF-8";
+
+/*リセットスタイル*/
+ul,ol,li,dl,dt,table, caption, th, td,img{
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    text-align: left;
+    list-style-type: none;
+    line-height: 1.4em
+}
+
+p{
+    line-height:1.4em;
+}
+
+table,th,td{
+    border-collapse: collapse;
+    border: solid 1px;
+    border-spacing: 0;
+}
+
+
+th,td{
+    padding: 0 0.5em;
+    line-height: 1.5em;
+}
+
+th{
+    text-align: center;
+}
+
+td{
+    text-align: left;
+}
+
+#main li{
+    margin-left: 20px;
+}
+
+em{
+    font-style: normal;
+    font-weight: bold;
+}
+
+/*フッター*/
+#footer {
+    clear: both;
+    margin:auto;
+    width:800px;
+    text-align:center;
+}
+
+/* スクロールバー領域確保により、短いページでの左右のずれをなくす */
+html {
+    overflow: scroll;
+    overflow: -moz-scrollbars-vertical;
+    overflow-x: scroll;
+
+}
+
+body {
+    background-color:#FFFFFF;
+    font-size:75%;
+    background-color: #FFFFFF;
+/*background: #FFFFFF url(../img/background.png) repeat-x bottom;*/
+}
+
+/*Link関連*/
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover{
+    font-weight: bold;
+}
+
+a img { border: none; }
+
+/*ヘッダ*/
+#header {
+    margin: auto;
+    position: relative;
+    padding-top: 10px;
+    padding-left: 10px;
+    height: 70px;
+    width: 800px;
+}
+
+#header .theme {
+    position: absolute;
+    top: 10px; /*#headerのpadding-topに対応、テーマをロゴと同じ高さにする*/
+    right: 0px; /*右寄せ*/
+}
+
+#global-navi{
+    height: 30px;
+    background: url(../img/bcg_navi.gif) repeat-x left top;
+}
+
+#global-navi ul{
+    margin:auto;
+    width:800px;
+}
+
+#global-navi ul li{
+    list-style:none;
+    float:left;
+    width:100px;
+}
+
+/*以下containerで包む(width800px固定)*/
+#container {
+    margin: 0 auto;
+    width:800px;
+    overflow: hidden; /*clearfix*/
+    background: #ffffff;
+}
+
+/*clearfix*/
+* html #container {
+    zoom: 1;
+}
+
+*+html #container {
+    zoom: 1;
+}
+
+/*#container:after { 
+  content: "";
+  display: block;
+  clear: both;
+  }
+
+*/
+
+#titlelogo {
+    margin: auto;
+    width: 800px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+/*問い合わせページの１カラム*/
+#onecolumn {
+    width:800px;
+    margin:auto;
+}
+/*トップページの２カラム*/
+#subtop {
+    margin-top: 40px; /*余裕を見込んで*/
+    float:left;
+    width:300px;
+}
+
+#maintop {
+    margin-top: 40px; /*余裕を見込んで*/
+    float:right;
+    width:480px;
+}
+
+/*他のページの２カラム*/
+#sub {
+    float:left;
+    width:200px;
+}
+
+#sub.fixed{
+    position: fixed; top:200px;
+}
+
+* html #sub.fixed    {     
+    position: absolute;     
+    top: expression(eval(document.documentElement.scrollTop+200));     
+}  
+
+#sub li {
+    display:block;
+    float: left;
+    width: 200px;
+    margin-bottom: 10px;
+    _margin-bottom: 5px; //ie6対策
+}
+
+#sub li li{
+    margin: 0 0 0 20px;
+    _margin: 0 0 0 10px; //ie6対策
+}
+
+#main {
+    float: right;
+    width: 580px;
+    position: relative;
+}
+
+#main img{
+    padding: 5px 0;
+}
+
+/*役員紹介*/
+#main h3 img{
+    float: left;
+}
+#main h4 img {
+    float: right;
+}
+#main p {
+    clear: both;
+}
+#main p img {
+    margin-left: 10px;	
+}
+
+/*クラブ紹介*/
+#main .club{
+    margin: 20px auto 50px;
+}
+
+#main .club h2 img{
+    float: none;
+}
+
+#main .club h3 img{
+    float: none;
+}
+
+#main .club h4{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    background: url(../img/icon.gif) no-repeat 0px center;
+    padding-left: 1.5em;
+    border-bottom: dotted 1px #cccccc;
+}
+
+/*生徒会活動報告記事関連*/
+#main .topics h3 img{
+    float: none;
+}
+
+#main .topics li{
+    position: relative;
+    border-bottom: thin dotted #000;
+    line-height: 1.6em;
+    font-size: 1.2em;
+}
+
+.date{
+    position: absolute;
+    right: 1em;
+}
+
+.author{
+    position: absolute;
+    left: 1em;
+}
+
+#article{
+    margin: 30px 10px 30px;
+}
+
+/*以下Easy Slider 1.5関連*/
+#slider { margin:10px 0px 0px 0px; }/*これがないと表示が崩れます*/
+#slider ul, #slider li, #slider2 ul, #slider2 li { margin:0; padding:0; list-style:none; }
+#slider li, #slider2 li { width:800px; height:200px; }
+#slider2 li { background-color:#333; color:#ddd; }
+p#controls, p#controls2 { margin:0; position:relative; }
+#prevBtn { display:block; margin:0; overflow:hidden; text-indent:-9999px; width:50px; height:30px; position:absolute; left:0px; top:5px; }
+#nextBtn { display:block; margin:0; overflow:hidden; text-indent:-9999px; width:50px; height:30px; position:absolute; left:750px; top:5px; }
+#prevBtn a { display:block; width:50px; height:30px; background:url("../img/Back.jpg") no-repeat 0 0; }
+#nextBtn a { display:block; width:50px; height:30px; background:url("../img/Next.jpg") no-repeat 0 0; }
